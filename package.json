@@ -2,6 +2,15 @@
   "name": "committer-cli",
   "version": "1.0.0",
   "main": "src/index.js",
+  "keywords": [
+    "command line application",
+    "cli",
+    "interactive",
+    "git"
+  ],
+  "repository": {
+    "url": "https://github.com/suicxyz/committer-cli"
+  },
   "dependencies": {
     "inquirer": "^9.1.4"
   }
