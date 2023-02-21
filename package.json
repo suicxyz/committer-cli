@@ -1,7 +1,7 @@
 {
   "name": "committer-cli",
   "version": "1.0.0",
-  "main": "src/index.js",
+  "main": "src/committer.js",
   "type": "module",
   "keywords": [
     "command line application",
