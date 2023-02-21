@@ -1,0 +1,8 @@
+{
+  "name": "committer-cli",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "dependencies": {
+    "inquirer": "^9.1.4"
+  }
+}
