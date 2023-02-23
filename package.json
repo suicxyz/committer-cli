@@ -13,7 +13,6 @@
   },
   "dependencies": {
     "chalk": "^5.2.0",
-    "get-git-status": "^1.0.8",
     "inquirer": "^9.1.4"
   },
   "keywords": [
