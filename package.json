@@ -1,20 +1,61 @@
 {
   "name": "committer-cli",
-  "version": "1.0.0",
-  "main": "src/committer.js",
   "type": "module",
-  "keywords": [
-    "command line application",
-    "cli",
-    "interactive",
-    "git"
-  ],
-  "repository": {
-    "url": "https://github.com/suicxyz/committer-cli"
+  "version": "1.0.0",
+  "description": "Work in progress...",
+  "main": "src/committer.js",
+  "bin": {
+    "committer-cli": "lib/committer.js"
+  },
+  "scripts": {
+    "dev": "ts-node src/committer.ts",
+    "build": "tsc"
   },
   "dependencies": {
     "chalk": "^5.2.0",
     "get-git-status": "^1.0.8",
     "inquirer": "^9.1.4"
-  }
+  },
+  "keywords": [
+    "cli",
+    "inquirer",
+    "command line application",
+    "helper",
+    "git commit",
+    "git",
+    "commit",
+    "input",
+    "nodejs",
+    "prompt",
+    "node",
+    "menu",
+    "confirm",
+    "ask",
+    "answer",
+    "stdin",
+    "stdout",
+    "terminal",
+    "cmd",
+    "bash",
+    "shell",
+    "zsh",
+    "fish",
+    "javscript"
+  ],
+  "author": "suicxyz",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/inquirer": "^9.0.3",
+    "@types/node": "^18.14.0",
+    "typescript": "^4.9.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suicxyz/committer-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/suicxyz/committer-cli/issues"
+  },
+  "homepage": "https://github.com/suicxyz/committer-cli#readme"
 }
