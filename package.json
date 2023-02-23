@@ -4,6 +4,10 @@
   "version": "1.0.0",
   "description": "Work in progress...",
   "main": "src/committer.js",
+  "files": [
+    "lib/",
+    "*.md"
+  ],
   "bin": {
     "committer-cli": "lib/committer.js"
   },
