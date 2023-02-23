@@ -1,0 +1,23 @@
+{
+	"compilerOptions": {
+		"allowJs": true,
+		"target": "es5",
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"module": "es6",
+		"moduleResolution": "Node",
+		"rootDir": "./src",
+		"baseUrl": ".",
+		"outDir": "./lib",
+		"removeComments": true,
+		"resolveJsonModule": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"skipLibCheck": true,
+	},
+	"ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
+  },
+	"include": ["src/**/*"]
+}
