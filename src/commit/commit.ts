@@ -1,7 +1,6 @@
 import { execSync } from "child_process";
 
-import getEmoji from "./get-emoji";
-import chalk from "chalk";
+import getEmoji from "./get-emoji.js";
 
 export type Commit = {
 	files: string;

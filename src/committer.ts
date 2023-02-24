@@ -5,8 +5,8 @@ import inquirer from "inquirer";
 import { execSync } from "child_process";
 
 import chalk from "chalk";
-import commit, { Commit } from "./commit/commit";
-import questions from "./questions";
+import commit, { Commit } from "./commit/commit.js";
+import questions from "./questions.js";
 
 let modified_files = [],
 	deleted_files = [],
@@ -75,7 +75,8 @@ async function committer() {
 			branch: useDefaultBranch === true ? undefined : useBranch,
 		};
 
-		commit(commitOptions);
+		const commitFeedback = commit(commitOptions);
+		console.log(commitFeedback);
 	}
 }
 
