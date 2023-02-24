@@ -36,7 +36,9 @@ for (let i of modified_files) all_files.push("Modified:\t" + i);
 for (let i of deleted_files) all_files.push("Deleted:\t" + i);
 for (let i of untracked_files) all_files.push("Untracked:\t" + i);
 
-console.log("Committer CLI - A cool CLI for cool commits on GitHub");
+console.log(
+	chalk.bold("Committer CLI") + " - A cool CLI for cool commits on GitHub"
+);
 
 console.log("\nThe following files are not commited:");
 all_files.map((i) => {
@@ -64,20 +66,18 @@ async function committer() {
 	let filesToCommit = "";
 	for (let i of files) filesToCommit += i + " ";
 
-	if (commitRN) {
-		var commitOptions: Commit = {
-			files: filesToCommit,
-			message: commitMessage,
-			commitType: commitType,
-			keyword: commitKeyword,
-			description: description != undefined ? description : "",
-			defaultBranch: useDefaultBranch,
-			branch: useDefaultBranch === true ? undefined : useBranch,
-		};
+	var commitOptions: Commit = {
+		files: filesToCommit,
+		message: commitMessage,
+		commitType: commitType,
+		keyword: commitKeyword,
+		description: description != undefined ? description : "",
+		defaultBranch: useDefaultBranch,
+		branch: useDefaultBranch === true ? undefined : useBranch,
+	};
 
-		const commitFeedback = commit(commitOptions);
-		console.log(commitFeedback);
-	}
+	const commitFeedback = commit(commitOptions);
+	console.log(commitFeedback);
 }
 
 committer();
