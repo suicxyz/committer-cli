@@ -1,7 +1,7 @@
 import { execSync } from "child_process";
 
-import COMMITS_KEYWORDS from "./commit/keywords";
-import COMMITS_TYPES from "./commit/types";
+import COMMITS_KEYWORDS from "./commit/keywords.js";
+import COMMITS_TYPES from "./commit/types.js";
 
 let rawBranches = execSync("git branch -a").toString().split("\n");
 rawBranches.pop();
@@ -62,12 +62,6 @@ export default (all_files) => [
 		name: "description",
 		message: "Write your commit description:",
 		when: (answers: any): Boolean => answers.addLongDescription === true,
-	},
-	{
-		type: "confirm",
-		name: "commitRN",
-		message: "Do you want to push your commits right now?",
-		default: true,
 	},
 	{
 		type: "confirm",
