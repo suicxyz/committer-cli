@@ -2,16 +2,21 @@
   "name": "committer-cli",
   "type": "module",
   "version": "1.0.0",
-  "description": "Work in progress...",
-  "main": "src/committer.js",
+  "description": "A cool CLI for cool GitHub commits.",
+  "exports": "src/committer.js",
+  "engines": {
+    "node": ">=14.16"
+  },
   "files": [
     "lib/",
     "*.md"
   ],
   "bin": {
-    "committer-cli": "lib/committer.js"
+    "committer-cli": "./lib/committer.js",
+    "committer": "./lib/committer.js"
   },
   "scripts": {
+    "test": "committer",
     "dev": "ts-node src/committer.ts",
     "build": "tsc"
   },

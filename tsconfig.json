@@ -4,8 +4,8 @@
 		"target": "es5",
 		"experimentalDecorators": true,
 		"emitDecoratorMetadata": true,
-		"module": "es6",
-		"moduleResolution": "Node",
+		"module": "Node16",
+		"moduleResolution": "node16",
 		"rootDir": "./src",
 		"baseUrl": ".",
 		"outDir": "./lib",
@@ -17,7 +17,6 @@
 	},
 	"ts-node": {
     "esm": true,
-    "experimentalSpecifierResolution": "node"
   },
-	"include": ["src/**/*"]
+	"include": ["src/**/*"],
 }
