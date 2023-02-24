@@ -8,7 +8,7 @@
 		"moduleResolution": "node16",
 		"rootDir": "./src",
 		"baseUrl": ".",
-		"outDir": "./lib",
+		"outDir": "./dist",
 		"removeComments": true,
 		"resolveJsonModule": true,
 		"esModuleInterop": true,
