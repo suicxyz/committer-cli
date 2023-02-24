@@ -8,6 +8,11 @@ import chalk from "chalk";
 import commit, { Commit } from "./commit/commit.js";
 import questions from "./questions.js";
 
+console.log(
+	chalk.bold("Committer CLI") + " - A cool CLI for cool commits on GitHub"
+);
+console.log("");
+
 let modified_files = [],
 	deleted_files = [],
 	untracked_files = [];
@@ -23,6 +28,7 @@ for (let i in lines) {
 
 	if (lines[i].includes("nothing to commit")) {
 		console.log(chalk.blueBright("You have no files to commit!"));
+		process.exit(0);	
 	}
 
 	if (lines[i].includes("modified"))
@@ -35,10 +41,6 @@ for (let i in lines) {
 for (let i of modified_files) all_files.push("Modified:\t" + i);
 for (let i of deleted_files) all_files.push("Deleted:\t" + i);
 for (let i of untracked_files) all_files.push("Untracked:\t" + i);
-
-console.log(
-	chalk.bold("Committer CLI") + " - A cool CLI for cool commits on GitHub"
-);
 
 console.log("\nThe following files are not commited:");
 all_files.map((i) => {
