@@ -12,8 +12,8 @@
     "*.md"
   ],
   "bin": {
-    "committer-cli": "./lib/committer.js",
-    "committer": "./lib/committer.js"
+    "committer-cli": "./dist/committer.js",
+    "committer": "./dist/committer.js"
   },
   "scripts": {
     "test": "committer",
