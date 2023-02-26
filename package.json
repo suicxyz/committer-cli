@@ -13,7 +13,9 @@
   ],
   "bin": {
     "committer-cli": "./dist/committer.js",
-    "committer": "./dist/committer.js"
+    "committer": "./dist/committer.js",
+    "cmt": "./dist/committer.js",
+    "git-cmg": "./dist/committer.js"
   },
   "scripts": {
     "test": "committer",
