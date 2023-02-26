@@ -1,12 +1,12 @@
 <div align="center">
-	<img src="assets/committer-cli.png" />
+	<img src="assets/committer-cli.svg" />
 
-    When you use Committer, things get easy and prettier!
-    See down below how to install and use Committer to make cool (and understandable) commits in your GitHub repository.
+When you use Committer, things get easy and prettier!
+<br>See down below how to install and use Committer to make cool (and understandable) commits in your GitHub repository.
 
 </div>
 
-# Instalation
+# Installation
 
 You can install Committer using the most common package managers for node.js
 
