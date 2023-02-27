@@ -14,6 +14,7 @@
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,
 		"skipLibCheck": true,
+		"typeRoots": ["./node_modules/@types", ".src/@types"]
 	},
 	"ts-node": {
     "esm": true,
