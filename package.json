@@ -12,10 +12,10 @@
     "*.md"
   ],
   "bin": {
-    "committer-cli": "./dist/committer.js",
-    "committer": "./dist/committer.js",
-    "cmt": "./dist/committer.js",
-    "git-cmg": "./dist/committer.js"
+    "committer-cli": "./dist/index.js",
+    "committer": "./dist/index.js",
+    "cmt": "./dist/index.js",
+    "git-cmg": "./dist/index.js"
   },
   "scripts": {
     "test": "committer",
