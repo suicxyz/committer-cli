@@ -1,5 +1,7 @@
 import { execSync } from "child_process";
 
+import chalk from "chalk";
+
 export const getStatus = (): string => {
 	const status = execSync("git status").toString();
 	var lines = status.split("\n");
@@ -13,7 +15,7 @@ export const getStatus = (): string => {
 		lines[curIndex] = lines[curIndex].trim().replace("\t", "");
 
 		if (lines[curIndex].includes("nothing to commit"))
-			return "You have no files to commit!";
+			return "you have no files to commit";
 
 		let curLine = lines[curIndex].split(":");
 
