@@ -1,10 +1,9 @@
-import { exit } from "process";
 import { getStatus } from "./status.js";
 
-export const getFiles = (): any => {
+export const getFiles = () => {
 	var modifiedFiles: Array<string> = [];
-	var deletedFiles: Array<string> = [];
 	var untrackedFiles: Array<string> = [];
+	var deletedFiles: Array<string> = [];
 
 	const status = getStatus().split("+");
 
@@ -14,11 +13,9 @@ export const getFiles = (): any => {
 		curLineFiles.pop();
 
 		if (curLine.startsWith("modified:")) modifiedFiles = curLineFiles;
-		if (curLine.startsWith("deleted:")) deletedFiles = curLineFiles;
 		if (curLine.startsWith("untracked:")) untrackedFiles = curLineFiles;
+		if (curLine.startsWith("deleted:")) deletedFiles = curLineFiles;
 	}
 
-	console.log({ modifiedFiles, deletedFiles, untrackedFiles });
-	exit();
-	return { modifiedFiles, deletedFiles, untrackedFiles };
+	return { modifiedFiles, untrackedFiles, deletedFiles };
 };
