@@ -8,16 +8,24 @@ export const getStatus = (): string => {
 	var deleted = "deleted:";
 
 	for (let i in lines) {
-		lines[i] = lines[i].trim().replace("\t", "");
-		if (lines[i].includes("nothing to commit"))
+		const curIndex = parseInt(i);
+
+		lines[curIndex] = lines[curIndex].trim().replace("\t", "");
+
+		if (lines[curIndex].includes("nothing to commit"))
 			return "You have no files to commit!";
 
-		let curLine = lines[i].split(":");
+		let curLine = lines[curIndex].split(":");
 
-		if (lines[i].includes("modified")) modified += `${curLine[1].trim()}|`;
-		if (lines[i].includes("deleted")) deleted += `${curLine[1].trim()}|`;
-		if (lines[i] == "Untracked files:") {
-			untracked += `${lines[parseInt(i) + 2].trim()}|`;
+		if (lines[curIndex].includes("modified"))
+			modified += `${curLine[1].trim()}|`;
+		if (lines[curIndex].includes("deleted")) deleted += `${curLine[1].trim()}|`;
+		if (lines[curIndex] == "Untracked files:") {
+			const start = curIndex + 2;
+			for (let j = start; j < lines.length; j++) {
+				if (lines[j] == "") break;
+				untracked += `${lines[j].trim()}|`;
+			}
 		}
 	}
 
