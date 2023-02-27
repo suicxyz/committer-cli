@@ -1,9 +1,9 @@
 {
   "name": "committer-cli",
   "type": "module",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A cool CLI for cool GitHub commits.",
-  "exports": "src/committer.js",
+  "exports": "src/index.js",
   "engines": {
     "node": ">=14.16"
   },
@@ -19,7 +19,7 @@
   },
   "scripts": {
     "test": "committer",
-    "dev": "ts-node src/committer.ts",
+    "dev": "ts-node src/index.ts",
     "build": "tsc"
   },
   "dependencies": {
