@@ -1,11 +1,22 @@
+import chalk from "chalk";
+
 import { getStatus } from "./status.js";
 
-export const getFiles = () => {
+export const getFiles = (prompt_list: boolean = false) => {
 	var modifiedFiles: Array<string> = [];
 	var untrackedFiles: Array<string> = [];
 	var deletedFiles: Array<string> = [];
 
-	const status = getStatus().split("+");
+	const stdout = getStatus();
+
+	if (stdout.startsWith("you have no")) {
+		console.log(chalk.cyanBright("You have no files to commit!"));
+		process.exit();
+	}
+
+	var status = stdout.split("+");
+
+	if (prompt_list) console.log(`The following files are not commited:\n`);
 
 	for (let i in status) {
 		const curLine = status[i];
