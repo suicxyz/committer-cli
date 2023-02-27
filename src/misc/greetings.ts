@@ -5,10 +5,10 @@ import { getFiles } from "../git/files.js";
 export const greetings = () => {
 	console.log(
 		chalk.bold("Committer CLI") +
-			" - A cool CLI for cool commits on GitHub\n\nThe following files are not commited:\n"
+			" - A cool CLI for cool commits on GitHub\n"
 	);
 
-	const { modifiedFiles, deletedFiles, untrackedFiles } = getFiles();
+	const { modifiedFiles, deletedFiles, untrackedFiles } = getFiles(true);
 
 	for (let i of modifiedFiles)
 		console.log(
