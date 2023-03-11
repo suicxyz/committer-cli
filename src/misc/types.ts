@@ -1,7 +1,8 @@
 export default [
 	{ name: "accessibility", keyword: "other" },
 	{ name: "adding a test", keyword: "test" },
-	{ name: "code review changes", keyword: "build" },
+	{ name: "adding a dependency", keyword: "build" },
+	{ name: "code review changes", keyword: "style" },
 	{ name: "animations and transitions", keyword: "other" },
 	{ name: "bugfix", keyword: "fix" },
 	{ name: "comments", keyword: "docs" },

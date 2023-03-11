@@ -3,5 +3,5 @@ import { greetings } from "./misc/greetings.js";
 
 export const committer = () => {
 	greetings();
-	commit();
+	// commit();
 };

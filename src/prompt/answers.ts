@@ -4,9 +4,9 @@ import inquirer from "inquirer";
 import { getQuestions } from "./questions.js";
 import { getFiles } from "../git/files.js";
 import { getBranches } from "../git/branch.js";
-import { PromptAnswer } from "src/@types/committer-cli.js";
+import { PromptAnswer } from "committer-cli";
 
-export const promptAnswers = (): PromptAnswer => {
+export const promptAnswers = async (): Promise<PromptAnswer> => {
 	const { modifiedFiles, deletedFiles, untrackedFiles } = getFiles();
 	var files: Array<string> = [];
 
@@ -18,11 +18,7 @@ export const promptAnswers = (): PromptAnswer => {
 
 	const questions = getQuestions(files, { defaultBranch, allBranches });
 
-	var answers = undefined;
-
-	inquirer.prompt(questions).then((a) => {
-		answers = a;
-	});
+	var answers: PromptAnswer = await inquirer.prompt(questions);
 
 	return answers;
 };

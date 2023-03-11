@@ -7,7 +7,7 @@ export const setCommitMessage = (
 	type: string,
 	message: string,
 	description: string
-): string => {
+): { status: "ERROR" | "SUCCESS", stdout: string } => {
 	const emoji = getEmoji(keyword, type);
 	const hasDescription =
 		description === undefined ? "" : ` -m "${description}"`;
@@ -16,5 +16,9 @@ export const setCommitMessage = (
 		`git commit -m "${emoji} ${keyword}: ${message}"${hasDescription}`
 	).toString();
 
-	return stdout;
+	if (stdout.startsWith("Author identity unknown")) {
+		return { status: "ERROR", stdout: "PTWYA" }
+	}
+
+	return { status: "SUCCESS", stdout };
 };
