@@ -1,7 +1,7 @@
 import chalk from "chalk";
 
 import { getFiles } from "../git/files.js";
-import { getUserConfig } from "../troubleshooting/user-config.js";
+import { getUserConfig } from "../troubleshooting/github-config.js";
 
 export const greetings = async () => {
 	console.log(
